@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>UrbanAlert</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+
+    <div class="logo-icon">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+
+    <span>UrbanAlert</span>
+
+  </div>
+
+  <nav>
+
+    <a href="#inicio">Início</a>
+    <a href="#problemas">Problemas</a>
+    <a href="#denunciar">Denunciar</a>
+    <a href="#contato">Contato</a>
+
+  </nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      Sistema Inteligente de Gestão Urbana
+    </div>
+
+    <h1>
+      Sistema de Denúncia Anônima
+      de Problemas Urbanos
+    </h1>
+
+    <p>
+      Reporte problemas urbanos da sua cidade de forma rápida,
+      simples e totalmente anônima.
+    </p>
+
+    <button>
+      Fazer Denúncia Agora
+    </button>
+
+  </div>
+
+</section>
+
+<section class="problems" id="problemas">
+
+  <div class="section-title">
+
+    <h2>Problemas Urbanos</h2>
+
+    <p>
+      Veja os tipos de ocorrências que podem ser denunciadas
+    </p>
+
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon blue">
+        <i class="fa-regular fa-lightbulb"></i>
+      </div>
+
+      <h3>Iluminação Pública</h3>
+
+      <p>
+        Postes apagados, fios danificados e iluminação defeituosa.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon cyan">
+        <i class="fa-solid fa-droplet"></i>
+      </div>
+
+      <h3>Saneamento</h3>
+
+      <p>
+        Vazamentos, esgoto aberto e drenagem urbana.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon orange">
+        <i class="fa-solid fa-road"></i>
+      </div>
+
+      <h3>Infraestrutura</h3>
+
+      <p>
+        Buracos, sinalização ruim e vias danificadas.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon green">
+        <i class="fa-solid fa-trash"></i>
+      </div>
+
+      <h3>Limpeza Urbana</h3>
+
+      <p>
+        Acúmulo de lixo e descarte irregular.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="report" id="denunciar">
+
+  <div class="section-title">
+
+    <h2>Registrar Denúncia</h2>
+
+    <p>
+      Preencha as informações abaixo
+    </p>
+
+  </div>
+
+  <div class="form-container">
+
+    <form id="formDenuncia">
+
+      <label>Tipo de Problema</label>
+
+      <select id="tipoProblema">
+        <option value="">Selecione o problema</option>
+        <option value="Iluminação Pública">Iluminação Pública</option>
+        <option value="Saneamento">Saneamento</option>
+        <option value="Infraestrutura">Infraestrutura</option>
+        <option value="Limpeza Urbana">Limpeza Urbana</option>
+      </select>
+
+      <label>Localização</label>
+
+      <div class="autocomplete">
+
+        <input
+                type="text"
+                id="endereco"
+                placeholder="Digite o endereço ou localização"
+        >
+
+        <div id="sugestoes"></div>
+
+      </div>
+
+      <label>Mapa da Localização</label>
+
+      <div id="map"></div>
+
+      <label>Descrição</label>
+
+      <textarea
+              id="descricao"
+              placeholder="Descreva o problema"
+      ></textarea>
+
+      <label>Anexar Foto</label>
+
+      <input type="file">
+
+      <button type="submit">
+        Enviar Denúncia
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<section class="contact" id="contato">
+
+  <div class="section-title">
+
+    <h2>Contato</h2>
+
+    <p>
+      Entre em contato com nossa equipe
+    </p>
+
+  </div>
+
+  <div class="contact-box">
+
+    <div class="contact-item">
+      <i class="fa-regular fa-envelope"></i>
+      <span>contato@urbanalert.com</span>
+    </div>
+
+    <div class="contact-item">
+      <i class="fa-solid fa-phone"></i>
+      <span>(31) 99999-9999</span>
+    </div>
+
+    <div class="contact-item">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Belo Horizonte - MG</span>
+    </div>
+
+    <button>
+      Falar com Suporte
+    </button>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 UrbanAlert - Todos os direitos reservados
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
